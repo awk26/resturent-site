@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% load static%}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  {% include "navbar.html"%}
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" style="margin-top: 10px;">
+      <div class="carousel-item active">
+        <img src="{%static  'image/food7.jpg'%}" class="d-block w-100" alt="..." style="height: 500px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static  'image/food9.jpg'%}" class="d-block w-100" alt="..."style="height: 500px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static  'image/food10.jpg'%}" class="d-block w-100" alt="..." style="height: 500px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing"  style="margin-top: 20px; margin-right: 80px;">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="230px" height="230px" src="{%static  'image/gif2.gif'%}">
+        <h2 class="fw-normal" style="margin-left:20px; margin-top: 5px;">Chicken Ghee roast</h2>
+        <p>A classic Mangalorean style Ghee Roast chicken, is a traditional recipe from the kitchen of Mangalorean households.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="230px" height="230px" src="{%static  'image/gif4.gif'%}">
+      
+
+        <h2 class="fw-normal" style="margin-left:20px; margin-top: 5px;">Easy Veg</h2>
+        <p>Find here a list of 13 best vegetarian recipes like gobhi aloo,matar paneer lababdaar & many more with key ingredients and how to make process.
+        </p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="230px" height="230px" src="{%static  'image/gif3.gif'%}">
+
+        <h2 class="fw-normal" style="margin-left:20px; margin-top: 5px;">PERFECT POT ROAST</h2>
+        <p>Truly the best melt-in-your-mouth pot roast, cooked low and slow and simmered until perfection. Serve with crusty bread!</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">An Amazing Vegetarian Paella <span class="text-muted">It’ll blow your
+            mind.</span></h2>
+        <p class="lead">A much-loved vegetarian paella recipe. And, for this veg-centric, California-inspired take on the Spanish classic, you don't need a special pan 
+          If you have a traditional paella pan, great!  Use it.
+           That said, don't let the lack of a special pan foil your paella endeavors. 
+          I've successfully cooked paella in copper pans (a favorite), as well as stainless steel, and cast iron.
+        </p>
+      </div>
+      <div class="col-md-5">
+        
+        <img src="{%static  'image/veg.avif'%}" width="500" height="400">
+       
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">BLISTERED GREEN BEAN RICE BOW
+           <span class="text-muted">See for
+            yourself.</span></h2>
+        <p class="lead">This easy and tasty blistered green bean rice bowl with spicy chili crisp and saucy soft-boiled egg is the perfect meal for a hectic week. 
+          It comes together effortlessly in about thirty minutes and it’s an absolute breeze to meal prep. Plus the combination of blistered green beans and smoky chili crisp is so good, you’ll end up craving it.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        
+        <img src="{%static  'image/veg3.jpg'%}" width="450" height="400">
+     
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">SOUTHWEST TOFU SCRAMBLE <span class="text-muted">Checkmate.</span>
+        </h2>
+        <p class="lead">If you’re a tofu newbie, a tofu scramble is simply crumbled tofu that looks a bit like scrambled eggs (but vegan!) and has whatever flavorful add-ins you like. 
+          The best part about this scramble is that you don’t have to press the tofu like you do with many other tofu recipes, so the overall process is super fast from start to finish. 
+          Today we went with a simple southwest flavor profile for the seasonings and add-ins,
+           but you can switch it up to include whatever you want!</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{%static  'image/veg4.jpg'%}" width="450" height="400">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/style1.css' %}">
+</head>
+<style>
+	/* Custom CSS styles */
+	.product-card {
+		border: 1px solid #ddd;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+		padding: 10px;
+		margin-bottom: 20px;
+		transition: all 0.3s ease;
+	}
+
+	.product-card1 {
+		border: 1px solid #ddd;
+
+		padding: 10px;
+		margin-bottom: 20px;
+
+	}
+
+	.product-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+	}
+
+	.div1 {
+		display: block;
+		font-size: 16px;
+		color: #7e808c;
+		font-weight: 400;
+		margin-bottom: 36px;
+		margin-top: -30px;
+	}
+</style>
+
+<body>
+	{% include "navbar.html" %}
+	
+	<div class="container ">
+		<div class="row">
+			<div class="col-sm-8 product-card1">
+				<div style="margin-right:25px ;">
+					<h5>Choose a delivery address</h5>
+				</div>
+				<div>Multiple addresses in this location</div>
+				<form class="row g-3">
+					<div class="col-md-6">
+					  <label for="inputEmail4" class="form-label">Email</label>
+					  <input type="email" class="form-control" id="inputEmail4">
+					</div>
+					<div class="col-md-6">
+					  <label for="inputPassword4" class="form-label">Password</label>
+					  <input type="password" class="form-control" id="inputPassword4">
+					</div>
+					<div class="col-12">
+					  <label for="inputAddress" class="form-label">Address</label>
+					  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+					</div>
+					<div class="col-12">
+					  <label for="inputAddress2" class="form-label">Address 2</label>
+					  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+					</div>
+					<div class="col-md-6">
+					  <label for="inputCity" class="form-label">City</label>
+					  <input type="text" class="form-control" id="inputCity">
+					</div>
+					<div class="col-md-4">
+					  <label for="inputState" class="form-label">State</label>
+					  <div class="col-sm">
+						<input type="text" class="form-control"  aria-label="State">
+					  </div>
+					  
+					</div>
+					<div class="col-md-2">
+					  <label for="inputZip" class="form-label">Zip</label>
+					  <input type="text" class="form-control" id="inputZip">
+					</div>
+					<div class="col-12">
+					  <div class="form-check">
+						<input class="form-check-input" type="checkbox" id="gridCheck">
+						<label class="form-check-label" for="gridCheck">
+						  Check me out
+						</label>
+					  </div>
+					</div>
+					<div class="col-12">
+					  <button type="submit" class="btn btn-primary">Sign in</button>
+					</div>
+				  </form>
+
+			
+			</div>
+		
+			<div class="col-sm-4 product-card1">
+				<h4>Cart Details</h4>
+				<div class="card mb-3" style="max-width: 540px;">
+					{% for item in data %}
+		
+					<div class="row g-0">
+					  <div class="col-md-4" style="max-width: 100px; max-height: 150px;" >
+						<img src="{{item.product.image.url}}" class="img-fluid rounded-start" alt="..." width="80px" height="80px" style="margin-top: 5px ;margin-left: 5px;">
+					  </div>
+					  <div class="col-md-8">
+						<div class="card-body" style="margin-top: -10px; margin-left: -22px;">
+						  <h6>Card title</h5>
+						  <p class="mb-2 text-muted small" style=" margin-top: -5px;">This is a wider card </p>
+						<div class="my-3">
+							<label for="quantity" >Quantity</label>
+							<button><a href="{%url 'product:minuscart' item.id %}" name="pid" class="minus-cart btn" pid="{{item.product.id}}"><i class="fas fa-minus-square fa-lg"></i>-</a></button>
+							</a>
+							<span id="quantity">{{item.quantity}}</span>
+							<button><a href="{%url 'product:pluscart' item.id %}" name='pid' class="plus-cart btn" pid="{{item.product.id}}"><i class="fas fa-plus-square fa-lg"></i>+</a></button>
+						</div>  
+						  
+						</div>
+					  </div>
+					</div>
+					{% endfor %}
+				  </div>
+			</div>
+			
+		</div>
+	</div>
+	
+</body>

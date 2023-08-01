@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us - Maffin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  {% include "navbar.html" %}
+  <body >
+  
+    <div class="container mt-5" style="margin-top: 150px;">
+      <h1 class="text-center">Contact Us</h1>
+      <p class="text-center">Have a question or concern? We're here to help.</p>
+      <div class="row mt-5">
+        <div class="col-sm-6">
+          <h2>Contact Information</h2>
+          <ul class="list-unstyled">
+            <li>Email: support@maffin.com</li>
+            <li>Phone: +91-22-60006633</li>
+          </ul>
+          <h2>Business Hours</h2>
+          <p>Monday to Sunday: 9am to 11pm IST</p>
+        </div>
+        <div class="col-sm-6">
+          <h2>Connect with Us</h2>
+          <ul class="list-unstyled">
+            <li>Facebook: <a href="https://www.facebook.com/swiggyindia">https://www.facebook.com/maffin </a></li>
+            <li>Twitter: <a href="https://twitter.com/swiggy_in">https://twitter.com/maffin_food</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/swiggy_in">https://www.instagram.com/maffin _34</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm-6">
+          <h2>FAQs</h2>
+          <p><a href="#">Check out our frequently asked questions for quick answers.</a></p>
+        </div>
+        <div class="col-sm-6">
+          <h2>Send Us a Message</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+              <input type="number" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group mt-3">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+              
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+              
+

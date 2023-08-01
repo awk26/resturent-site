@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom styles for this page -->
+	<style>
+		/* Set the background image */
+		.about-header {
+			background-image: url('https://images.pexels.com/photos/1200491/pexels-photo-1200491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Include navbar code -->
+	{% include "navbar.html" %}
+
+	<!-- About Us section -->
+	<section class="about-section py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="text-center mb-4">About Us</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut dictum velit. Suspendisse potenti. Sed rutrum, est nec maximus bibendum, nulla lacus eleifend enim, id congue leo metus ac tellus. Nullam non venenatis eros. Sed non est lectus. Curabitur at justo auctor, finibus velit in, convallis purus. Integer fermentum urna est, id facilisis orci convallis vel. Sed at tincidunt purus. Sed porta blandit velit, eu tincidunt mi posuere quis. Sed sagittis lacinia euismod. In suscipit aliquam bibendum. Nulla facilisi. Vestibulum consequat augue quis mi semper commodo.</p>
+					<p>Nullam eu mauris ut orci iaculis varius ut sed neque. Aliquam commodo turpis vel tellus laoreet mollis. Nunc laoreet viverra ipsum, ut dignissim dolor molestie sit amet. Aliquam commodo nisi id orci sollicitudin, id consectetur dolor semper. Suspendisse commodo suscipit nulla, non bibendum nisi sagittis sit amet. Aenean in enim tincidunt, consequat velit vel, volutpat velit. Aliquam fringilla nibh vel enim posuere sagittis. Ut et posuere lectus. Praesent posuere ligula eros, vel dignissim tellus consequat id. Praesent bibendum, nisi eu dignissim viverra, velit magna viverra nulla, sit amet gravida lectus nisi a est. Fusce accumsan dui et quam facilisis, eget tristique lorem lobortis.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Header section with background image -->
+	<div class="about-header"></div>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
